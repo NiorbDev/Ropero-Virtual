@@ -1,0 +1,108 @@
+/* Pulido del flujo de captura: la foto y los cinco datos esenciales son lo primero. */
+body {
+  background: radial-gradient(circle at 92% 4%, #f7e8ff 0 14%, transparent 34%), #fff8fc;
+}
+
+.content { position: relative; }
+.content-header { padding-bottom: 8px; }
+.content-header h1 { letter-spacing: -0.025em; }
+.persistence-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  color: #558b72;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.persistence-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #67c294;
+  box-shadow: 0 0 0 4px #dff5e9;
+}
+.tip-card { box-shadow: 0 8px 22px #b05d8f10; }
+.detailed-form {
+  border: 1px solid #f0ddf4;
+  box-shadow: 0 12px 28px #86509210;
+}
+.photo-upload-field {
+  padding: 14px;
+  border: 1px dashed #d7b8da;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #fffafe, #f8f1ff);
+}
+.photo-upload-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #725378;
+  font-size: .85rem;
+  font-weight: 850;
+}
+.photo-upload-heading > span:first-child {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #f8dcec;
+  font-size: 1rem;
+}
+.photo-upload-heading small {
+  display: block;
+  margin-top: 3px;
+  color: #a18da3;
+  font-size: .72rem;
+  font-weight: 600;
+}
+.photo-upload-field input[type=file] {
+  width: 100%;
+  margin-top: 9px;
+  border-color: #e5d1e7;
+  background: #fff;
+}
+.photo-upload-field input[type=file]::file-selector-button {
+  margin-right: 9px;
+  border: 0;
+  border-radius: 9px;
+  padding: 8px 11px;
+  color: #fff;
+  background: #ad79cb;
+  font-weight: 800;
+  cursor: pointer;
+}
+.detailed-form label:not(.photo-upload-field) { font-size: .78rem; }
+.detailed-form input:focus,
+.detailed-form select:focus,
+.detailed-form textarea:focus,
+.wardrobe-filters input:focus,
+.wardrobe-filters select:focus {
+  outline: 3px solid #f4c9e4;
+  outline-offset: 1px;
+  border-color: #c87eaf;
+}
+.garment-more-details { box-shadow: inset 0 1px #fff; }
+.garment-form-actions { padding-top: 3px; }
+.garment-form-actions .primary-button {
+  box-shadow: 0 7px 15px #bc5f9a30;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.garment-form-actions .primary-button:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px #bc5f9a42;
+}
+.garment-card { transition: transform .15s ease, box-shadow .15s ease; }
+.garment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px #69416918;
+}
+@media (max-width: 720px) {
+  .content-header h1 { font-size: 2.15rem; }
+  .photo-upload-field { padding: 12px; }
+  .content-actions { width: 100%; }
+  .content-actions .primary-button,
+  .content-actions .inventory-button { width: 100%; }
+}

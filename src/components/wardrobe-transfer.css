@@ -1,0 +1,29 @@
+.wardrobe-transfer { padding: 14px; border: 1px solid #ead8e6; border-radius: 18px; color: #665269; background: linear-gradient(145deg, #fff, #fbf3fa); }
+.wardrobe-transfer-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.wardrobe-transfer-heading > div { display: grid; }
+.wardrobe-transfer-heading div > span, .wardrobe-transfer-preview > div span { color: #ad5682; font-size: .58rem; font-weight: 900; letter-spacing: .12em; }
+.wardrobe-transfer-heading > span { display: grid; width: 31px; height: 31px; place-content: center; border-radius: 10px; color: #a8507e; background: #fae3ef; }
+.wardrobe-transfer > p { margin: 8px 0 11px; color: #8b788e; font-size: .72rem; line-height: 1.45; }
+.wardrobe-transfer-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.wardrobe-transfer-actions button, .wardrobe-transfer-preview-actions button { min-height: 39px; border: 1px solid #e2cedd; border-radius: 11px; padding: 7px 9px; color: #765e79; font-size: .72rem; font-weight: 800; background: #fff; cursor: pointer; }
+.wardrobe-transfer-actions button:last-of-type { color: #fff; border-color: transparent; background: linear-gradient(135deg, #df719f, #9c72d0); }
+.wardrobe-transfer button:disabled { opacity: .48; cursor: default; }
+.wardrobe-transfer-file, .wardrobe-transfer-file-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.wardrobe-transfer-preview { margin-top: 12px; padding: 12px; border: 1px solid #e5d2e1; border-radius: 15px; background: #fff; }
+.wardrobe-transfer-preview > div { display: grid; }
+.wardrobe-transfer-preview ul { display: flex; flex-wrap: wrap; gap: 5px; margin: 10px 0; padding: 0; list-style: none; }
+.wardrobe-transfer-preview li { padding: 5px 8px; border-radius: 9px; color: #8d5d7a; font-size: .66rem; font-weight: 800; background: #f9e8f1; }
+.wardrobe-transfer-preview fieldset { display: grid; gap: 7px; margin: 0; padding: 0; border: 0; }
+.wardrobe-transfer-preview legend { margin-bottom: 6px; font-size: .7rem; font-weight: 900; }
+.wardrobe-transfer-preview fieldset label { display: flex; align-items: flex-start; gap: 8px; padding: 8px; border: 1px solid #eadce7; border-radius: 11px; cursor: pointer; }
+.wardrobe-transfer-preview fieldset input { margin-top: 3px; accent-color: #d5679d; }
+.wardrobe-transfer-preview fieldset label > span { display: grid; }
+.wardrobe-transfer-preview fieldset strong { font-size: .72rem; }
+.wardrobe-transfer-preview fieldset small { color: #97869a; font-size: .62rem; }
+.wardrobe-transfer-preview-actions { display: flex; justify-content: flex-end; gap: 6px; margin-top: 10px; }
+.wardrobe-transfer-preview-actions button.primary { color: #fff; border-color: transparent; background: linear-gradient(135deg, #df719f, #9c72d0); }
+.wardrobe-transfer-message, .wardrobe-transfer-error { margin: 9px 0 0 !important; font-size: .7rem !important; font-weight: 750; }
+.wardrobe-transfer-message { color: #4d8067 !important; }
+.wardrobe-transfer-error { color: #a94460 !important; }
+
+@media (max-width: 500px) { .wardrobe-transfer-actions { grid-template-columns: 1fr; } }

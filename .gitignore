@@ -1,0 +1,12 @@
+.worktrees/
+.scaffold/
+node_modules/
+dist/
+src-tauri/target/
+.openai/
+.env
+.env.*
+!.env.example
+public/theme/ribbon-argyle.png
+public/theme/rose-tartan.png
+public/theme/README.md

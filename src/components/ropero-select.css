@@ -1,0 +1,19 @@
+.ropero-select-trigger { display:flex; align-items:center; justify-content:space-between; gap:.5rem; width:100%; min-height:44px; text-align:left; padding:.55rem .75rem; color:var(--chocolate); background:var(--paper); border:1px solid var(--seam); border-radius:10px; }
+.ropero-select-trigger svg { flex:none; }
+.ropero-select-sheet { box-sizing:border-box; width:min(94vw,440px); max-width:none; max-height:none; padding:0; border:1px solid #dbc4b4; border-radius:20px; color:#443025; background:#fff9ed; }
+.ropero-select-sheet::backdrop { background:#44302580; }
+.ropero-select-panel { display:flex; flex-direction:column; gap:.65rem; max-height:min(75dvh,600px); padding:1rem; }
+.ropero-select-panel header { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.ropero-select-panel h2 { margin:0; font-size:1.45rem; }
+.ropero-select-panel header button { width:44px; min-height:44px; border:0; border-radius:50%; background:#f2cfca; color:#443025; font-size:1.4rem; }
+.ropero-select-panel input { box-sizing:border-box; width:100%; min-height:44px; padding:.5rem .7rem; border:1px solid #dbc4b4; border-radius:10px; background:#fffcf7; color:#443025; }
+.ropero-select-options { overflow:auto; overscroll-behavior:contain; }
+.ropero-select-options h3 { margin:.8rem .55rem .3rem; font-size:.82rem; color:#854456; }
+.ropero-select-options button { display:flex; gap:.75rem; align-items:center; justify-content:space-between; width:100%; min-height:44px; border:0; border-radius:8px; padding:.45rem .65rem; text-align:left; color:#443025; background:transparent; }
+.ropero-select-options button[aria-pressed=true] { background:#f2cfca; font-weight:700; }
+.ropero-select-options button[aria-pressed=true] span { flex:none; width:.55rem; height:.55rem; border-radius:50%; background:#854456; }
+@media(max-width:760px) {
+  .ropero-select-sheet { margin:auto auto 0; width:100%; border-radius:22px 22px 0 0; }
+  .ropero-select-panel { padding:1rem max(1rem, env(safe-area-inset-right)) calc(1rem + env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left)); }
+}
+.ropero-select-field { display:grid; gap:.35rem; min-width:0; }

@@ -1,0 +1,19 @@
+.wardrobe-picker { display: grid; gap: 6px; margin-bottom: 14px; max-width: 320px; font-size: .875rem; color: var(--cocoa); }
+.wardrobe-picker button { font: inherit; cursor: pointer; color: var(--chocolate); }
+.wardrobe-picker-trigger { display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 10px 14px; border: 1px solid var(--seam); border-radius: 10px; background: var(--paper); text-align: left; }
+.wardrobe-picker-trigger strong { flex: 1; overflow-wrap: anywhere; min-width: 0; }
+.wardrobe-picker-backdrop { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; background: #2d1d24a6; }
+.wardrobe-picker-panel { width: min(100%, 420px); max-height: 85dvh; display: flex; flex-direction: column; padding: 22px; box-sizing: border-box; background: var(--cream); border: 1px solid var(--seam); border-radius: 20px; box-shadow: 0 20px 80px #29171055; }
+.wardrobe-picker-panel header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.wardrobe-picker-panel h2 { flex: 1; margin: 0; font-size: 1.7rem; }
+.wardrobe-picker-panel header button { width: 44px; height: 44px; border: 0; background: transparent; font-size: 1.7rem; }
+.wardrobe-picker-options { display: grid; gap: 10px; overflow-y: auto; min-height: 0; }
+.wardrobe-picker-options button { display: flex; align-items: center; gap: 12px; min-height: 64px; padding: 12px; border: 1px solid var(--seam); border-radius: 12px; background: var(--paper); text-align: left; }
+.wardrobe-picker-options button[aria-current=true] { border-color: var(--chocolate); background: #f2cfca; }
+.wardrobe-picker-options strong { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: 1rem; }
+.wardrobe-picker-avatar { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; background: var(--chocolate); color: var(--cream); border-radius: 50%; }
+.wardrobe-picker-create { min-height: 48px; flex-shrink: 0; margin-top: 18px; border: 1px dashed var(--cocoa); border-radius: 10px; background: transparent; }
+@media(max-width: 760px) {
+  .wardrobe-picker-backdrop { padding: 0; align-items: end; }
+  .wardrobe-picker-panel { width: 100%; max-height: 85dvh; border-radius: 24px 24px 0 0; padding: 22px 20px calc(22px + env(safe-area-inset-bottom)); }
+}

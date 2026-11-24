@@ -1,0 +1,53 @@
+.photo-cutout-backdrop { position: fixed; z-index: 1000; inset: 0; display: grid; place-items: center; padding: 18px; background: #3f2d4159; backdrop-filter: blur(8px); }
+.photo-cutout-editor { --cutout-pink: #dc6fa4; width: min(920px, 100%); max-height: calc(100dvh - 36px); overflow: auto; padding: clamp(16px, 3vw, 25px); border: 1px solid #f1dfec; border-radius: 26px; color: #503f54; background: linear-gradient(145deg, #fffafd, #f9f3ff); box-shadow: 0 28px 75px #34253552; }
+.photo-cutout-editor > header { display: flex; justify-content: space-between; gap: 18px; }
+.photo-cutout-editor > header span { color: #ae527f; font-size: .68rem; font-weight: 900; letter-spacing: .14em; }
+.photo-cutout-editor h2 { margin: 4px 0; font-size: clamp(1.55rem, 4vw, 2rem); }
+.photo-cutout-editor header p { margin: 0; color: #847388; font-size: .88rem; }
+.photo-cutout-close { flex: 0 0 42px; width: 42px; height: 42px; border: 1px solid #ead6e5; border-radius: 14px; color: #765f79; background: #fff; font-size: 1.45rem; cursor: pointer; }
+.photo-cutout-workspace { display: grid; grid-template-columns: minmax(0, 1fr) 235px; gap: 17px; margin-top: 18px; }
+.photo-cutout-canvas-wrap { position: relative; display: grid; min-height: 430px; overflow: hidden; place-items: center; border: 1px solid #e5d7e2; border-radius: 20px; background-color: #fff; background-image: linear-gradient(45deg, #eadfe7 25%, transparent 25%), linear-gradient(-45deg, #eadfe7 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #eadfe7 75%), linear-gradient(-45deg, transparent 75%, #eadfe7 75%); background-position: 0 0, 0 8px, 8px -8px, -8px 0; background-size: 16px 16px; }
+.photo-cutout-canvas { display: block; max-width: 100%; max-height: 64dvh; touch-action: none; cursor: crosshair; object-fit: contain; }
+.photo-cutout-status { display: grid; min-width: 250px; min-height: 220px; place-content: center; color: #856f88; font-weight: 750; background: #ffffffd9; }
+.photo-cutout-status.error, .photo-cutout-error { color: #a9435e; }
+.photo-cutout-controls { min-width: 0; margin: 0; padding: 0; border: 0; display: flex; flex-direction: column; gap: 12px; }
+.photo-cutout-mode { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.photo-cutout-mode button { display: grid; min-height: 72px; place-content: center; gap: 3px; border: 1px solid #e5d5e3; border-radius: 15px; color: #78647d; background: #fff; font-size: .68rem; font-weight: 800; cursor: pointer; }
+.photo-cutout-mode button > span { font-size: 1.25rem; }
+.photo-cutout-mode button.active { border-color: #e28db6; color: #a13f73; background: #fde8f2; box-shadow: 0 0 0 3px #e786b322; }
+.photo-cutout-size { display: grid; gap: 7px; padding: 12px; border-radius: 15px; color: #77627a; font-size: .73rem; font-weight: 800; background: #fff; }
+.photo-cutout-size > span { display: flex; justify-content: space-between; }
+.photo-cutout-size strong { color: #aa4d7c; }
+.photo-cutout-size input { width: 100%; accent-color: var(--cutout-pink); }
+.photo-cutout-history { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.photo-cutout-history button, .photo-cutout-reset { min-height: 42px; border: 1px solid #e5d5e3; border-radius: 12px; color: #705c74; background: #fff; font-weight: 750; cursor: pointer; }
+.photo-cutout-history button:disabled, .photo-cutout-reset:disabled { opacity: .38; cursor: default; }
+.photo-cutout-history span { font-size: .68rem; }
+.photo-cutout-tip { display: flex; gap: 9px; margin-top: auto; padding: 12px; border-radius: 15px; color: #816d84; background: #f9eaf3; }
+.photo-cutout-tip span { color: #d66a9e; font-size: 1.2rem; }
+.photo-cutout-tip p { margin: 0; font-size: .7rem; line-height: 1.4; }
+.photo-cutout-error { margin: 12px 0 0; font-size: .8rem; font-weight: 700; }
+.photo-cutout-editor > footer { display: flex; justify-content: flex-end; gap: 8px; margin-top: 17px; }
+.photo-cutout-editor > footer button { min-height: 43px; border-radius: 12px; padding: 9px 15px; font-weight: 800; cursor: pointer; }
+.photo-cutout-secondary { border: 1px solid #e4d4e1; color: #705b73; background: #fff; }
+.photo-cutout-primary { border: 0; color: #fff; background: linear-gradient(135deg, #e46d9f, #9a70d2); box-shadow: 0 7px 18px #aa568d30; }
+.photo-cutout-editor > footer button:disabled { opacity: .45; cursor: default; }
+
+@media (max-width: 700px) {
+  .photo-cutout-backdrop { align-items: end; padding: 0; }
+  .photo-cutout-editor { width: 100%; max-height: 95dvh; padding: 15px 11px calc(14px + env(safe-area-inset-bottom)); border-radius: 25px 25px 0 0; }
+  .photo-cutout-workspace { display: flex; flex-direction: column; }
+  .photo-cutout-canvas-wrap { min-height: 330px; }
+  .photo-cutout-canvas { max-height: 46dvh; }
+  .photo-cutout-controls { display: grid; grid-template-columns: 1fr 1fr; }
+  .photo-cutout-mode, .photo-cutout-size, .photo-cutout-tip { grid-column: 1 / -1; }
+  .photo-cutout-tip { display: none; }
+  .photo-cutout-editor > footer { position: sticky; bottom: 0; display: grid; grid-template-columns: 1fr 1fr; padding-top: 9px; background: linear-gradient(transparent, #faf5fc 22%); }
+  .photo-cutout-primary { grid-column: 1 / -1; grid-row: 1; }
+}
+
+.photo-cutout-framing { display: grid; gap: 8px; grid-column: 1 / -1; }
+.photo-cutout-canvas { width: min(100%, calc(64dvh * var(--photo-ratio))); height: auto; }
+@media (max-width: 700px) {
+  .photo-cutout-canvas { width: min(100%, calc(46dvh * var(--photo-ratio))); }
+}
